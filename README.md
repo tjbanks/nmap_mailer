@@ -20,6 +20,19 @@ Change the following variables in the script to fit your needs:
 * SCAN_FOLDER - location to store previous scan results for diff comparison
 * INTERFACE - ifconfig interface name (useful for multiple NIC devices)
 
+## Crontab
+
+I've got this script setup in crontab to run every Wednesday morning at midnight. Depending on the location of your script it'll looks something like this:
+
+```
+sudo crontab -e
+```
+Add the following line:
+```
+0 0 * * 3 /root/nmap_scans/nmap_mailer.sh
+```
+
+Crontab guide [here](https://linuxconfig.org/linux-crontab-reference-guide).
 
 ## Example Emailed Report
 
